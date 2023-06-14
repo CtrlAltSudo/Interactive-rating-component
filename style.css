@@ -38,3 +38,6 @@ button {
     color: white;
     cursor: pointer;
 }
+.selection { /* adds background colour to selected score */
+    background-color: hsl(25, 97%, 53%);
+}
