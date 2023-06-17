@@ -1,20 +1,27 @@
 const form = document.querySelector("form");
 const rating = document.querySelectorAll("li");
 
-
+let selectedValue = null; 
 let isClicked = false;
 
-rating.forEach(function(list) {
-  list.addEventListener('click', function() {
-    rating.forEach(function(sel) {
-      if (sel !== list) {
-        sel.classList.remove("selection");
+rating.forEach(function(list) { // Iterates over all the li HTML tags 
+  list.addEventListener('click', function() { // Listens for a click on the iteration
+    rating.forEach(function(sel) { // Iterates over the rating 
+      if (sel !== list) { // Checks if selection is not the same as initial click
+        sel.classList.remove("selection"); // removes selection CSS class 
       }
     });
-
-    list.classList.toggle("selection");
-    console.log("Element clicked!");
+    selectedValue = list.innerText; // stores the selected value in a variable
+    list.classList.toggle("selection"); // Adds or removes selection class 
+    console.log("Element clicked!"); // Used to help me check if code was working
   });
 });
+form.addEventListener("submit", function (event) {
+  if (!selectedValue) {
+    event.preventDefault(); // Prevent the form submission
+    alert("Please select a rating before submitting."); // Display an alert message
+  }
+});
 
+//DISCLAIMER ChatGPT helped with this code
 
