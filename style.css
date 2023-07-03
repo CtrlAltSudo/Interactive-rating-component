@@ -28,6 +28,7 @@ ul li {
     height: 3rem;
     text-align: center;
     line-height: 3.2rem;
+    cursor: pointer;
 }
 button {
     border-radius: 2rem;
@@ -37,6 +38,15 @@ button {
     background-color: hsl(25, 97%, 53%);
     color: white;
     cursor: pointer;
+}
+button:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+    transition: 0.5s;
+}
+ul li:hover {
+    background-color: #959eac;
+    transition: 0.5s;
 }
 .selection { /* adds background colour to selected score */
     background-color: hsl(25, 97%, 53%);
