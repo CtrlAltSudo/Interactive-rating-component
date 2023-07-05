@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 const rating = document.querySelectorAll("li");
 const thankYou = document.querySelector("span");
+const secondContainer = document.getElementsByClassName("selContainer");
 
 let selectedValue = null; 
 let isClicked = false;
@@ -22,8 +23,13 @@ rating.forEach(function(list) { // Iterates over all the li HTML tags
 
 
 form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  document.getElementById("container").style.display = "none"; // hides selection container once submit is clicked
+  document.getElementById("selContainer").style.display = "block"; // displays thank you container after selection is made and submit is clicked
   if (!selectedValue) {
     event.preventDefault(); // Prevent the form submission
+
+
     alert("Please select a rating before submitting."); // Display an alert message
   } 
 });
