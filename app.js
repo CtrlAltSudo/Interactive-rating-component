@@ -25,7 +25,7 @@ rating.forEach(function(list) { // Iterates over all the li HTML tags
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   document.getElementById("container").style.display = "none"; // hides selection container once submit is clicked
-  document.getElementById("selContainer").style.display = "block"; // displays thank you container after selection is made and submit is clicked
+  document.getElementById("selContainer").style.display = "flex"; // displays thank you container after selection is made and submit is clicked
   if (!selectedValue) {
     event.preventDefault(); // Prevent the form submission
 

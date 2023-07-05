@@ -13,13 +13,25 @@ body {
     border: white solid 1px;
     max-width: 21rem;
     padding: 1.5rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(#222832, #181c24) ;
+}
+#container img {
+    background-color: #252e3a;
+    width: ;
 }
 #selContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 1px solid white;
     max-width: 21rem;
     display: none;
+}
+#selContainer .thankYou{
+    background-color: grey;
+    border-radius: 5rem;
+    color: orange;
 }
 ul {
     display: flex;
