@@ -51,6 +51,7 @@ ul {
     gap: 1.3rem;
     list-style: none;
     padding: 1rem 0 1rem 0;
+    list-style: none;
 }
 ul li {
     border-radius: 50%;
@@ -64,6 +65,7 @@ ul li {
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 400;
     line-height: 2.9;
+
 }
 button {
     border-radius: 2rem;
