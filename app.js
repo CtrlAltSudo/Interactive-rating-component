@@ -19,9 +19,6 @@ rating.forEach(function(list) { // Iterates over all the li HTML tags
     console.log("Element clicked!"); // Used to help me check if code was working
   });
 });
-
-
-
 form.addEventListener("submit", function (event) {
   if (!selectedValue) {
     event.preventDefault(); // Prevent the form submission

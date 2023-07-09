@@ -23,20 +23,31 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid white;
     max-width: 21rem;
     display: none;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2.7rem 2rem 2.5rem 2rem;
+    background-image: linear-gradient(#222832, #181c24) ;
+
 }
 #selContainer .thankYou{
-    background-color: grey;
+    background-color: #252e3a;
     border-radius: 5rem;
     color: orange;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin-top: 1.8rem;
 }
 h1 {
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 600;
     margin-bottom: 0.8rem;
     font-size: 1.8rem;
+}
+#selContainer h1 {
+    margin-top: 2rem;
 }
 p {
     margin-top: 0;
