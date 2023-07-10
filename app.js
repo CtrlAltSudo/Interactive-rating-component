@@ -11,14 +11,27 @@ rating.forEach(function(list) { // Iterates over all the li HTML tags
     rating.forEach(function(sel) { // Iterates over the rating 
       if (sel !== list) { // Checks if selection is not the same as initial click
         sel.classList.remove("selection"); // removes selection CSS class 
-      }
+      } else 
+      selectedValue = list.innerText; // stores the selected value in a variable
+      thankYou.innerText = selectedValue + " ";
+      list.classList.toggle("selection"); // Adds or removes selection class
+      console.log("Element clicked!"); // Used to help me check if code was working
     });
-    selectedValue = list.innerText; // stores the selected value in a variable
-    thankYou.innerText = selectedValue + " ";
-    list.classList.toggle("selection"); // Adds or removes selection class 
-    console.log("Element clicked!"); // Used to help me check if code was working
   });
 });
+
+rating.forEach(function(list) { 
+  list.addEventListener('mouseover', function(){
+    rating.forEach(function(sel) { 
+      if (sel === list){
+        document.querySelectorAll("ul").classList.remove("hover");
+      }
+    });
+  });  
+});
+
+
+
 form.addEventListener("submit", function (event) {
   if (!selectedValue) {
     event.preventDefault(); // Prevent the form submission
