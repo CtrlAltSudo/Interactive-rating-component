@@ -18,17 +18,22 @@ rating.forEach(function(list) { // Iterates over all the li HTML tags
       console.log("Element clicked!"); // Used to help me check if code was working
     });
   });
+  list.addEventListener('mouseover', function() {
+    if (!list.classList.contains("selection")) {
+      list.classList.add("ul.li:hover");
+    }
+  });
+
+  list.addEventListener('mouseout', function() {
+    if (!list.classList.contains("selection")) {
+      list.classList.remove("ul.li:hover");
+    }
+  });
 });
 
-rating.forEach(function(list) { 
-  list.addEventListener('mouseover', function(){
-    rating.forEach(function(sel) { 
-      if (sel === list){
-        document.querySelectorAll("ul").classList.remove("hover");
-      }
-    });
-  });  
-});
+
+
+
 
 
 
