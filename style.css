@@ -96,9 +96,10 @@ button:hover {
     color: hsl(25, 97%, 53%);
     transition: 0.5s;
 }
-ul li:hover {
+ul li.hover:hover {
     background-color: #959eac;
     transition: 0.5s;
+    color:  white;
 }
 .imgBackground {
     padding: 18px;
@@ -113,7 +114,25 @@ ul li:hover {
 
 .selection { /* adds background colour to selected score */
     background-color: hsl(25, 97%, 53%);
+    color: white;
 }
 .attribution {
     margin-top: 5rem;
 }
+@media only screen and (max-width: 600px) {
+    ul {
+      padding: 0;
+      gap: 1rem;
+    }
+    ul li {
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5;
+      }
+    #container {
+        max-width: 17rem;
+      }
+      #selContainer {
+        max-width: 17rem;
+      }
+  }
