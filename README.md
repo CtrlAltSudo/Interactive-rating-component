@@ -27,6 +27,6 @@ This is my first Javascript challenge by Frontend Mentor, the javascript took a 
 
 <a href="https://github.com/CtrlAltSudo">CtrlAltSudo</a>.
 
-## Acknowledgments
+## Acknowledgments 
 
 Stack overflow, Google and ChatGPT still prove to be valuable resources! 
