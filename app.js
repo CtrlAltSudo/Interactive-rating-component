@@ -21,7 +21,7 @@ rating.forEach(function(list) { // Iterates over all the li HTML tags
   });
   list.addEventListener('mouseover', function() { // checks for selection on mouse over and either removes or adds a css class
     if (!list.classList.contains("selection")) {
-      list.classList.add("hover");
+      list.classList.add("hover"); 
     } else if(list.classList.contains("selection")) {
       list.classList.remove("hover");
     }
@@ -30,17 +30,17 @@ rating.forEach(function(list) { // Iterates over all the li HTML tags
   list.addEventListener('click', function() { // also checks for selection but on mouse click and either removes or adds a css class
     if (list.classList.contains("selection")) {
       list.classList.remove("hover");
-    } else if (!Ílist.classList.contains("selection")) {
+    } else if (!list.classList.contains("selection")) {
       list.classList.add("hover");
     }
   });
 });
 
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function (event) { // loads thank you page, but only when a selection is made
   if (!selectedValue) {
     event.preventDefault(); // Prevent the form submission
-    alert("Please select a rating before submitting."); // Display an alert message
+    alert("Please select a rating before submitting."); // Display an alert message if a selection is not made
   } else if (selectedValue){
     event.preventDefault(); // Prevent the form submission
     document.getElementById("container").style.display = "none"; // hides selection container once submit is clicked
